@@ -18,4 +18,23 @@ describe('TimeService', () => {
       }
     )
   );
+
+  it('has the current hour',
+    inject([TimeService],
+      (timeService: TimeService) => {
+        const currentHour = new Date().getHours();
+        expect(timeService.getHour()).toEqual(currentHour);
+      }
+    )
+  );
+
+  it('has the current minutes',
+    inject([TimeService],
+      (timeService: TimeService) => {
+        const currentMinutes = new Date().getMinutes();
+        expect(timeService.getMinutes()).toEqual(currentMinutes);
+      }
+    )
+  );
+
 });

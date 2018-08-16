@@ -8,10 +8,14 @@ import { TimeService } from './time.service';
 })
 export class ClockComponent implements OnInit {
 
+  hour: number;
+  minutes: number;
+
   constructor(private time: TimeService) {}
 
   ngOnInit() {
-    
+    this.hour = this.time.getHour();
+    this.minutes = this.time.getMinutes();
   }
 
 }

@@ -5,6 +5,7 @@ describe('Component: ClockComponent', () => {
 
   let fixture: ComponentFixture<ClockComponent>;
   let comp: ClockComponent;
+  let element: HTMLElement;
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
@@ -17,11 +18,19 @@ describe('Component: ClockComponent', () => {
 
     fixture = TestBed.createComponent(ClockComponent);
     comp = fixture.componentInstance;
+    element = fixture.debugElement.nativeElement;
   });
 
-  it('shows the component name', () => {
+  it('shows the current hour', () => {
     fixture.detectChanges();
-    expect(fixture.debugElement.nativeElement.textContent).toContain('Clock component');
+    const currentHour = new Date().getHours();
+    expect(element.textContent).toContain(currentHour);
+  });
+
+  it('shows the current minutes', () => {
+    fixture.detectChanges();
+    const currentMinutes = new Date().getMinutes();
+    expect(element.textContent).toContain(currentMinutes);
   });
 
 });

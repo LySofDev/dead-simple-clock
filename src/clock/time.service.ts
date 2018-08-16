@@ -7,4 +7,12 @@ export class TimeService {
     return "Hello, Time Service";
   }
 
+  public getHour(): number {
+    return new Date().getHours();
+  }
+
+  public getMinutes(): number {
+    return new Date().getMinutes();
+  }
+
 }
