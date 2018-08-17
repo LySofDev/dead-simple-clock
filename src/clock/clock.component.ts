@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TimeService } from './time.service';
 
 @Component({
@@ -6,11 +6,10 @@ import { TimeService } from './time.service';
   templateUrl: './clock.component.html',
   styleUrls: ['./clock.component.scss']
 })
-export class ClockComponent implements OnInit, OnDestroy {
+export class ClockComponent implements OnInit {
 
   hour: number;
   minutes: number;
-  running: boolean;
 
   @Input('ring') ringColor = '#ffc900';
   @Input('text') textColor = '#003368';
@@ -19,20 +18,13 @@ export class ClockComponent implements OnInit, OnDestroy {
   constructor(private time: TimeService) {}
 
   ngOnInit() {
-    this.running = true;
     this.updateTime();
     setInterval(this.updateTime, 1000);
   }
 
-  ngOnDestroy() {
-    this.running = false;
-  }
-
   updateTime() {
-    if (this.running) {
-      this.hour = this.time.getHour();
-      this.minutes = this.time.getMinutes();
-    }
+    this.hour = this.time.getHour();
+    this.minutes = this.time.getMinutes();
   }
 
 }
