@@ -107,7 +107,7 @@ describe('Component: ClockComponent', () => {
     let minutes: HTMLElement;
 
     beforeEach(() => {
-      testHostFixture = TestBed.createComponent(RingTestHostComponent);
+      testHostFixture = TestBed.createComponent(TextTestHostComponent);
       testHostComponent = testHostFixture.componentInstance;
       testElement = testHostFixture.debugElement.nativeElement;
       testHostFixture.detectChanges();
