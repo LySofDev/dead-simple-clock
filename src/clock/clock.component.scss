@@ -12,7 +12,6 @@ main {
   @include center-content;
   height: 300px;
   width: 300px;
-  background-color: white;
 }
 
 .outer-ring {
@@ -20,7 +19,6 @@ main {
   @include make-circle;
   height: 250px;
   width: 250px;
-  background-color: #ffc900;
 }
 
 .inner-ring {
@@ -28,7 +26,6 @@ main {
   @include make-circle;
   height: 150px;
   width: 150px;
-  background-color: white;
 }
 
 span {
@@ -36,5 +33,4 @@ span {
   font-size: 32px;
   font-family: sans-serif;
   font-weight: bold;
-  color: #003368;
 }

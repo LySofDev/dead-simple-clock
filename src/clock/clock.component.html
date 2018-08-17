@@ -1,9 +1,9 @@
-<main>
-  <div class="outer-ring">
-    <div class="inner-ring">
-      <span class="hour">{{ hour }}</span>
-      <span class="separator">:</span>
-      <span class="minutes">{{ minutes }}</span>
+<main [ngStyle]="{'background-color': backgroundColor}">
+  <div class="outer-ring" [ngStyle]="{'background-color': ringColor}">
+    <div class="inner-ring" [ngStyle]="{'background-color': backgroundColor}">
+      <span class="hour" [ngStyle]="{'color': textColor}">{{ hour }}</span>
+      <span class="separator" [ngStyle]="{'color': textColor}">:</span>
+      <span class="minutes" [ngStyle]="{'color': textColor}">{{ minutes }}</span>
     </div>
   </div>
 </main>

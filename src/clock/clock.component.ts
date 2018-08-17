@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TimeService } from './time.service';
 
 @Component({
@@ -10,6 +10,10 @@ export class ClockComponent implements OnInit {
 
   hour: number;
   minutes: number;
+
+  @Input('ring') ringColor = '#ffc900';
+  @Input('text') textColor = '#003368';
+  @Input('background') backgroundColor = '#ffffff';
 
   constructor(private time: TimeService) {}
 
