@@ -1,7 +1,7 @@
 {
     "name": "dead-simple-clock",
     "private": false,
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A simple clock to test Angular component library compatibility",
     "main": "./bundles/angular-library-starter.umd.js",
     "module": "./fesm5/angular-library-starter.js",
