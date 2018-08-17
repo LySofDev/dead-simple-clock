@@ -141,19 +141,19 @@ class TestHostComponent {
 
 @Component({
   selector: 'background-test-host',
-  template: `<dead-simple-clock [background]="testColor"></dead-simple-clock>`
+  template: `<dead-simple-clock [backgroundColor]="testColor"></dead-simple-clock>`
 })
 class BackgroundTestHostComponent extends TestHostComponent {}
 
 @Component({
   selector: 'text-test-host',
-  template: `<dead-simple-clock [text]="testColor"></dead-simple-clock>`
+  template: `<dead-simple-clock [textColor]="testColor"></dead-simple-clock>`
 })
 class TextTestHostComponent extends TestHostComponent {}
 
 @Component({
   selector: 'ring-test-host',
-  template: `<dead-simple-clock [ring]="testColor"></dead-simple-clock>`
+  template: `<dead-simple-clock [ringColor]="testColor"></dead-simple-clock>`
 })
 class RingTestHostComponent extends TestHostComponent {}
 

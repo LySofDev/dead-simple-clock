@@ -11,9 +11,9 @@ export class ClockComponent implements OnInit {
   hour: number;
   minutes: number;
 
-  @Input('ring') ringColor = '#ffc900';
-  @Input('text') textColor = '#003368';
-  @Input('background') backgroundColor = '#ffffff';
+  @Input() ringColor = '#ffc900';
+  @Input() textColor = '#003368';
+  @Input() backgroundColor = '#ffffff';
 
   constructor(private time: TimeService) {}
 
