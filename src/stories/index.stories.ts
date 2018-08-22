@@ -14,11 +14,29 @@ storiesOf('ClockComponent', module)
   .add('red ring', () => ({
     component: ClockComponent,
     props: {
-      ringColor: "red",
-      textColor: "red",
+      ringColor: "red"
+    },
+    moduleMetadata: {
+      providers: [TimeService]
+    }
+  }))
+
+  .add('green text', () => ({
+    component: ClockComponent,
+    props: {
+      textColor: "green"
+    },
+    moduleMetadata: {
+      providers: [TimeService]
+    }
+  }))
+
+  .add('pink background', () => ({
+    component: ClockComponent,
+    props: {
       backgroundColor: "pink"
     },
     moduleMetadata: {
       providers: [TimeService]
     }
-  }));
+  }))
