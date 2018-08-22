@@ -1,2 +1,1 @@
-export { ClockComponent } from './clock/clock.component';
-export { TimeService } from './clock/time.service';
+export { DeadSimpleClockModule } from './clock/clock.module';
